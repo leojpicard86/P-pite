@@ -39,7 +39,7 @@ L'indicateur d'allure (`+00:12` / `−00:12`) compare votre temps réel au temps
 ## Honnêteté des données (important pour le jury)
 * Les chiffres financiers sont **provisoires** (plan BGE) ; la scène « Numbers » le dit et montre que le scénario central perd de l'argent chaque mois. Le mois 7 est **notre extrapolation**, étiqueté comme tel.
 * Les chiffres de marché sont **rapportés, non vérifiés à la source** ; ils sont étiquetés sur la diapositive.
-* La boutique 3D est un **concept stylisé**, pas les vrais locaux (bandeau permanent pendant la visite).
+* La boutique 3D est une **vue d'artiste de la future boutique** (≈ 25 m²) : bandeau « Artist's impression · our future boutique » pendant la visite. Aucune photo, aucun plan ni aucune mesure des futurs locaux n'a servi.
 * Les personas sont des **hypothèses d'équipe**, pas des résultats d'enquête.
 * **À trancher avant la soutenance :** voir « Points à confirmer » dans `docs/FACT_MAP.md` (en particulier le traitement du remboursement du prêt dans le tableau de trésorerie).
 
@@ -51,8 +51,18 @@ npm run docs       # régénère docs/SCRIPT.md
 ```
 Les tests contrôlent : 720 s, 4 × 3 min, débit de parole 85–125 mots/min par scène, longueur des phrases, cohérence des tableaux financiers (sommes, soldes cumulés), répartition des facteurs clés (8/17/12/3), et que tout chiffre prononcé figure dans la liste des données sourcées.
 
-## Performance 3D
-Boutique entièrement procédurale (pas de fichier 3D), un seul rendu en continu uniquement pendant la scène 6 ; qualité adaptative (résolution et ombres baissent si la fréquence d'images chute) ; repli automatique sans WebGL. Mesures et limites : voir le compte rendu de livraison.
+## Boutique 3D (scène 6)
+Direction « boutique parisienne vintage chic », entièrement générée par le code (aucun fichier 3D, aucune image, aucune police distante) :
+* **Rue au crépuscule** : devanture anthracite, enseigne dorée « PÉPITE · Seconde main · Chantilly », store rayé bordeaux et crème, immeuble en pierre avec balcons, réverbère, buis, ardoise « Pépites du jour ».
+* **Intérieur** : boiseries, parquet en chevrons, niche rose avec néon « Pépite », portant laiton, chapelières, cabine d'essayage en velours, comptoir cannelé en chêne et marbre, mannequin couture en vitrine, olivier, fauteuil en velours, suspensions globe.
+* **Vêtements** : manteau camel, marinière, robe en soie, veste en jean, tweed, petite robe noire, perfecto en cuir… avec volume, texture et léger balancement.
+* **Image** : éclairage d'environnement, ombres douces, occlusion ambiante, halo des lampes, vignettage, tons ACES.
+* **Visite** : 6 arrêts (rue → vitrine → portants → cabine → comptoir → maquette ouverte), caméra guidée avec un léger mouvement « caméra à l'épaule » ; au dernier arrêt le toit se soulève et on peut tourner autour à la souris.
+
+### Performance
+La qualité s'adapte seule : niveau 2 (occlusion ambiante + halo + ombres), puis 1 (sans occlusion), puis 0 (rendu simple) si les images par seconde chutent. Le rendu 3D ne tourne que pendant la scène 6. Sans WebGL, un plan 2D prend le relais (touche `L` pour le forcer).
+Pour tester un niveau précis : ajouter `?q=0`, `?q=1` ou `?q=2` à l'adresse du fichier.
+**À faire avant la soutenance : ouvrir la scène 6 sur l'ordinateur et le projecteur de la salle** et vérifier la fluidité (sinon appuyer sur `L`).
 
 ## Polices
 Cormorant Garamond et Arimo (licence SIL OFL), embarquées via `@fontsource` ; aucune requête réseau à l'exécution.

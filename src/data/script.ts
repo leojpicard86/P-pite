@@ -79,12 +79,12 @@ export const scenes: Scene[] = [
     id: 'tour', eyebrow: 'The experience', title: 'Step inside PÉPITE', duration: 85, handover: true,
     sources: [boutique.src, SOURCES.mkt],
     beats: [
-      { say: 'Now, let’s step inside. This is a conceptual vision of our 25 square metre boutique. It is not the real premises.', cue: '3D: street view of the shop front at dusk. Disclaimer bar stays on.' },
-      { say: 'Outside, a refreshed façade and a careful window display. The window must create curiosity in a few seconds.', cue: '3D: camera glides to the window; the door opens.' },
-      { say: 'Inside, the rails. Each rail tells a story: a colour, a mood, a brand. New pieces arrive often, so there is always something to discover.', cue: '3D: camera enters; garments sway on the rails.' },
-      { say: 'Here is the fitting area. You cannot try clothes on when you buy online, and this is where we can make the difference.', cue: '3D: camera turns to the fitting room; the curtain moves.' },
-      { say: 'At the counter, a simple and warm welcome. Advice without pressure, card payment, and later a loyalty programme.', cue: '3D: camera moves to the counter.' },
-      { say: 'A small space, a big experience. And 25 square metres also means limited stock, so every piece has to earn its place.', cue: '3D: slow pull-back to the overview. Drag to explore.' }
+      { say: 'Now, let\u2019s step inside our future boutique. This is our vision of PÉPITE: 25 square metres in Chantilly, warm and welcoming.', cue: '3D: the shop front at dusk, lit from inside. Badge: artist\u2019s impression.' },
+      { say: 'Outside, a dark façade, golden letters and a striped awning. Our window must stop people in the street in a few seconds.', cue: '3D: camera glides to the window display; the door opens.' },
+      { say: 'Inside, the rails. Every piece is chosen, cleaned and presented like in a fashion boutique. New pieces arrive often, so there is always something to discover.', cue: '3D: camera enters; garments sway on the brass rail.' },
+      { say: 'Here is the fitting room, with a velvet curtain and a big mirror. You cannot try clothes on when you buy online.', cue: '3D: camera turns to the fitting room; the curtain moves.' },
+      { say: 'At the counter, a warm welcome and advice without pressure. Card payment, and later a loyalty programme.', cue: '3D: camera moves to the marble counter.' },
+      { say: 'A small space, a big experience. Every piece has to earn its place, and that is what makes each visit a discovery.', cue: '3D: the roof lifts away for an overview. Drag to explore.' }
     ]
   },
   {

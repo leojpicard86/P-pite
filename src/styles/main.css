@@ -176,9 +176,9 @@ blockquote{margin:22px 0 4px;font:italic 500 33px/1.22 var(--serif);color:var(--
 /* ---------- tour ---------- */
 .tourUi{position:absolute;inset:0;pointer-events:none}
 .tourBadge{position:absolute;top:30px;left:50%;transform:translateX(-50%);padding:10px 26px;border-radius:30px;background:rgba(32,32,32,.78);color:var(--cream);font:700 17px var(--sans);letter-spacing:.2em;z-index:21;white-space:nowrap}
-.tourCaption{position:absolute;left:90px;bottom:130px;width:660px;padding:30px 38px;background:rgba(244,240,232,.93);border-left:8px solid var(--burgundy);animation:capIn .7s cubic-bezier(.22,1,.36,1)}
+.tourCaption{position:absolute;left:90px;bottom:118px;width:560px;padding:22px 30px;background:rgba(24,21,19,.58);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-left:6px solid var(--rose);color:var(--cream);animation:capIn .7s cubic-bezier(.22,1,.36,1)}
 @keyframes capIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.tourCaption h3{font:500 64px/1.05 var(--serif);margin:8px 0 6px}.tourCaption p{margin:0;font-size:26px;line-height:1.35;color:var(--taupe-dk)}
+.tourCaption .eyebrow{color:var(--rose)}.tourCaption h3{font:500 54px/1.05 var(--serif);margin:6px 0 4px;color:#fff}.tourCaption p{margin:0;font-size:23px;line-height:1.35;color:#e6ddd0}
 .tourDots{position:absolute;left:50%;bottom:88px;transform:translateX(-50%);display:flex;gap:16px}
 .tourDots i{width:14px;height:14px;border-radius:50%;background:rgba(183,167,147,.55);box-shadow:0 0 0 1px rgba(32,32,32,.18)}.tourDots i.done{background:var(--sand2)}.tourDots i.on{background:var(--rose);box-shadow:0 0 0 6px rgba(210,154,143,.35)}
 .tourFallback{position:absolute;inset:0;background:var(--cream);display:grid;place-items:center;padding:60px 0 0 640px}

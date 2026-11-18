@@ -2,7 +2,7 @@
 
 > Generated from `src/data/script.ts` by `npm run docs`. Edit the script there, not here.
 
-**Total:** 12:00 (720 s) · **1190 words** · average 99 words per minute, pauses included.
+**Total:** 12:00 (720 s) · **1193 words** · average 99 words per minute, pauses included.
 
 How to read it: one line = one *beat*. Press `→` when you start saying the line; the animation in the *Cue* column then plays. Lines marked **⟶ HAND OVER** are where the next presenter takes over. No presenter is named: assign the four parts yourselves.
 
@@ -11,7 +11,7 @@ How to read it: one line = one *beat*. Press `→` when you start saying the lin
 | Part | Scenes | Time | Words |
 |---|---|---|---|
 | 1 | 1–3 | 03:00 | 283 (94 wpm) |
-| 2 | 4–6 | 03:00 | 295 (98 wpm) |
+| 2 | 4–6 | 03:00 | 298 (99 wpm) |
 | 3 | 7–9 | 03:00 | 315 (105 wpm) |
 | 4 | 10–12 | 03:00 | 297 (99 wpm) |
 
@@ -24,7 +24,7 @@ How to read it: one line = one *beat*. Press `→` when you start saying the lin
 | 3 | A market in motion | 01:40 | 01:20 | 126 | 95 |
 | 4 | Two needs. One boutique. | 03:00 | 00:50 | 87 | 104 |
 | 5 | A local circle for second-hand fashion | 03:50 | 00:45 | 81 | 108 |
-| 6 | Step inside PÉPITE | 04:35 | 01:25 | 127 | 90 |
+| 6 | Step inside PÉPITE | 04:35 | 01:25 | 130 | 92 |
 | 7 | More than another listing | 06:00 | 01:05 | 113 | 104 |
 | 8 | Turning wardrobes into value | 07:05 | 01:00 | 107 | 107 |
 | 9 | What we do first | 08:05 | 00:55 | 95 | 104 |
@@ -96,16 +96,16 @@ How to read it: one line = one *beat*. Press `→` when you start saying the lin
 
 ### 6. The experience — Step inside PÉPITE
 
-*04:35 → 06:00 · 127 words · sources: Business_Model_Canvas_Pepite_EN.pdf, Key Resources (shop of about 25 m²); Tableaux_Etude_de_marche_Pepite.xlsx*
+*04:35 → 06:00 · 130 words · sources: Business_Model_Canvas_Pepite_EN.pdf, Key Resources (shop of about 25 m²); Tableaux_Etude_de_marche_Pepite.xlsx*
 
 | Time | Say | Cue (animation) |
 |---|---|---|
-| 04:35 (14 s) | Now, let’s step inside. This is a conceptual vision of our 25 square metre boutique. It is not the real premises. | 3D: street view of the shop front at dusk. Disclaimer bar stays on. |
-| 04:49 (12 s) | Outside, a refreshed façade and a careful window display. The window must create curiosity in a few seconds. | 3D: camera glides to the window; the door opens. |
-| 05:01 (17 s) | Inside, the rails. Each rail tells a story: a colour, a mood, a brand. New pieces arrive often, so there is always something to discover. | 3D: camera enters; garments sway on the rails. |
-| 05:18 (15 s) | Here is the fitting area. You cannot try clothes on when you buy online, and this is where we can make the difference. | 3D: camera turns to the fitting room; the curtain moves. |
-| 05:33 (12 s) | At the counter, a simple and warm welcome. Advice without pressure, card payment, and later a loyalty programme. | 3D: camera moves to the counter. |
-| 05:45 (15 s) | A small space, a big experience. And 25 square metres also means limited stock, so every piece has to earn its place. **⟶ HAND OVER** | 3D: slow pull-back to the overview. Drag to explore. |
+| 04:35 (14 s) | Now, let’s step inside our future boutique. This is our vision of PÉPITE: 25 square metres in Chantilly, warm and welcoming. | 3D: the shop front at dusk, lit from inside. Badge: artist’s impression. |
+| 04:49 (14 s) | Outside, a dark façade, golden letters and a striped awning. Our window must stop people in the street in a few seconds. | 3D: camera glides to the window display; the door opens. |
+| 05:03 (17 s) | Inside, the rails. Every piece is chosen, cleaned and presented like in a fashion boutique. New pieces arrive often, so there is always something to discover. | 3D: camera enters; garments sway on the brass rail. |
+| 05:20 (14 s) | Here is the fitting room, with a velvet curtain and a big mirror. You cannot try clothes on when you buy online. | 3D: camera turns to the fitting room; the curtain moves. |
+| 05:34 (11 s) | At the counter, a warm welcome and advice without pressure. Card payment, and later a loyalty programme. | 3D: camera moves to the marble counter. |
+| 05:46 (14 s) | A small space, a big experience. Every piece has to earn its place, and that is what makes each visit a discovery. **⟶ HAND OVER** | 3D: the roof lifts away for an overview. Drag to explore. |
 
 ### 7. Positioning — More than another listing
 
@@ -182,4 +182,4 @@ How to read it: one line = one *beat*. Press `→` when you start saying the lin
 
 (Backup slide for questions: sources and the status of every figure.) Press `End` to open it during questions.
 
-_Sanity: 1201 words in total including the annex line._
+_Sanity: 1204 words in total including the annex line._

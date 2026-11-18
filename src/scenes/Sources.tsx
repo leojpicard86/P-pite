@@ -26,7 +26,7 @@ export default function Sources() {
           <p><Stamp>Reported</Stamp> Market and Vinted figures from secondary sources. Not verified at source.</p>
           <p><Stamp tone="good">Team estimate</Stamp> Impact/feasibility scores, personas.</p>
           <p><Stamp tone="bad">Extrapolation</Stamp> Month 7 cash: our straight-line projection, not in the plan.</p>
-          <p className="fine">The 3D boutique is a stylised concept. No real photos, plans or measurements were used.</p>
+          <p className="fine">The 3D boutique is an artist's impression of the future shop (~25 m²). No real photos, plans or measurements were used.</p>
         </div>
       </div>
     </>

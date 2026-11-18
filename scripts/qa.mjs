@@ -20,14 +20,17 @@ const flat = BEATS.flatMap((n, s) => Array.from({ length: n }, (_, b) => [s + 1,
 const targets = targetArg === 'all' ? flat : targetArg.split(',').map(t => t.split(':').map(Number));
 
 const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
-const ctx = await browser.newContext({ viewport: { width: 1920, height: 1080 }, offline: true });
+const [VW, VH] = (process.env.QA_SIZE ?? '1920x1080').split('x').map(Number);
+const ctx = await browser.newContext({ viewport: { width: VW, height: VH }, offline: true });
+ctx.setDefaultTimeout(240000);
 const page = await ctx.newPage();
 const problems = [], external = [];
 page.on('console', m => { if (['error', 'warning'].includes(m.type())) problems.push(`[${m.type()}] ${m.text()}`); });
 page.on('pageerror', e => problems.push(`[pageerror] ${e.message}`));
 page.on('request', r => { const u = r.url(); if (!/^(file|data|blob):/.test(u)) external.push(u); });
 
-await page.goto(pathToFileURL(dist).href);
+// pin the 3D quality (default: highest) so the software renderer does not step it down during capture
+await page.goto(`${pathToFileURL(dist).href}?q=${process.env.QA_Q ?? '2'}`);
 await page.waitForSelector('.stage');
 await page.waitForTimeout(1200);
 
@@ -40,10 +43,10 @@ for (const [s, b] of targets) {
   const target = idx(s, b);
   if (target < at) { await press('Home'); await page.waitForTimeout(100); at = 0; }
   await press('ArrowRight', target - at); at = target;
-  const wait = s === 6 ? 4600 : 2800;
+  const wait = s === 6 ? Number(process.env.QA_TOUR_WAIT ?? 9000) : 2800;
   await page.waitForTimeout(wait);
   const name = `${String(s).padStart(2, '0')}-${String(b + 1).padStart(2, '0')}.png`;
-  await page.screenshot({ path: `${out}/${name}` });
+  await page.screenshot({ path: `${out}/${name}`, timeout: 240000 });
   results.push(name);
   if (s === 6 && b === 2) {
     const fps = await page.evaluate(() => new Promise(res => {
@@ -51,9 +54,9 @@ for (const [s, b] of targets) {
       const f = () => { n++; if (performance.now() - t0 < 3000) requestAnimationFrame(f); else res(n / 3); };
       requestAnimationFrame(f);
     }));
-    console.log(`3D tour frame rate (CPU software GL, 1920x1080, NOT representative of a GPU): ${fps.toFixed(1)} fps`);
-    const info = await page.evaluate(() => { const i = window.__pepiteGL?.info; return i ? { calls: i.render.calls, triangles: i.render.triangles, textures: i.memory.textures, geometries: i.memory.geometries } : null; });
-    console.log('3D render stats per frame:', JSON.stringify(info));
+    console.log(`3D tour frame rate (CPU software GL, ${VW}x${VH}, quality ${process.env.QA_Q ?? '2'}, NOT representative of a GPU): ${fps.toFixed(1)} fps`);
+    const info = await page.evaluate(() => { const i = window.__pepiteGL?.info; return i ? { programs: i.programs?.length, textures: i.memory.textures, geometries: i.memory.geometries } : null; });
+    console.log('3D GPU resources:', JSON.stringify(info));
   }
 }
 console.log(`screenshots: ${results.length}`);

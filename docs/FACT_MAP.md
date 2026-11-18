@@ -38,6 +38,7 @@ Statut : **Plan** = prévision BGE (provisoire) · **Rapporté** = estimation se
 | Élément | Source |
 |---|---|
 | Boutique ≈ 25 m², 2 associées (70 / 30), Instagram/TikTok, rachat à domicile, coûts, revenus | `Business_Model_Canvas_Pepite_EN.pdf` |
+| Visite 3D : vue d'artiste (décor, mobilier, vêtements imaginés pour donner envie ; seule la surface ≈ 25 m² et la façade rafraîchie viennent du BMC) | `Business_Model_Canvas_Pepite_EN.pdf`, Key Resources |
 | 40 facteurs clés de succès : 8 fondamentaux, 17 hauts, 12 moyens, 3 bas ; 10 retenus | `Facteurs_cles_de_succes_Pepite.xlsx`, onglets Liste globale / Liste réduite / Graphiques |
 | 12 actions notées impact/faisabilité, seuil 3,5 | `Matrice_impact_faisabilite_Pepite.pdf` (notes = estimation équipe) |
 | 7 hypothèses et verdicts (1 validée, 2 partielles, 3 à valider, 1 invalidée) ; 5 prochaines étapes | `Demonter_une_evidence_Pepite.pdf` |
